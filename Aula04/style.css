@@ -1,0 +1,92 @@
+/* Base e aparência de “wireframe” */
+* { box-sizing: border-box; }
+body {
+margin: 0;
+font-family: system-ui, Arial, sans-serif;
+background: #f6f7fb;
+color: #0f172a;
+}
+/* Container principal*/
+#container {
+max-width: 1100px;
+margin: 24px auto;
+padding: 12px;
+background: #fff;
+border: 3px solid #3f3f46;
+display: grid;
+gap: 12px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-areas:
+"header header nav"
+"asideL main asideR"
+"footer footer footer";
+}
+/* Moldura “wireframe” para cada bloco semântico */
+header, nav, main, article, section, aside, footer {
+border: 2px dashed #94a3b8;
+border-radius: 10px;
+background: #fff;
+padding: 12px;
+text-align: center;
+font-weight: 600;
+}
+/* Áreas do grid */
+#container > header { grid-area: header; min-height: 60px; background: #eef2ff; }
+#container > nav { grid-area: nav; min-height: 60px; background: #e2e8f0; }
+#container > aside:first-of-type { grid-area: asideL; min-height: 280px; }
+#container > main { grid-area: main; min-height: 280px; position: relative; display: grid; gap: 12px; }
+#container > aside:last-of-type { grid-area: asideR; min-height: 280px; }
+#container > footer { grid-area: footer; min-height: 70px; background: #f1f5f9; }
+/* Rótulo do <main> (primeiro filho é um <p>) */
+main > p:first-child {
+position: absolute; top: 8px; left: 12px; margin: 0;
+font-weight: 700; color: #334155;
+}
+/* Blocos internos do <main> */
+main > section, main > article {
+min-height: 120px;
+display: flex; align-items: center; justify-content: center;
+border: 2px dashed #94a3b8; border-radius: 10px; background: #fff;
+}
+/* --------- MENU (apenas por elementos) --------- */
+nav { padding: 8px; }
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 8px;
+justify-content: center;
+flex-wrap: wrap; /* permite quebrar linha em telas estreitas */
+}
+nav li { }
+nav a {
+display: block;
+padding: 8px 12px;
+text-decoration: none;
+color: #0f172a;
+background: #ffffff;
+border: 1px solid #94a3b8;
+border-radius: 8px;
+font-weight: 600;
+}
+nav a:hover,
+nav a:focus-visible {
+background: #0f172a;
+color: #ffffff;
+outline: none;
+}
+/* ----------------------------------------------- */
+/* Responsivo: empilha tudo em telas menores */
+@media (max-width: 900px) {
+#container {
+grid-template-columns: 1fr;
+grid-template-areas:
+"header"
+"nav"
+"asideL"
+"main"
+"asideR"
+"footer";
+}
+}
