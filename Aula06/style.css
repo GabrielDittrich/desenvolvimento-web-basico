@@ -1,0 +1,59 @@
+/* # seletor de id - assosciado  */
+#container{
+
+    /* Borda */
+    border: solid 5px  blue;
+}
+
+/* seletor de tag */
+header{
+    width: 800px;
+    height: 100px;
+    background-color: lightyellow;
+}
+
+nav{
+    width: 800px;
+    height: 150px;
+    background-color: brown;
+}
+
+main{
+
+    /* borda pontilhada */
+    border: dashed 2px black;
+}
+
+section{
+    height: 185px;
+    width: 800px;
+    background-color: aqua;
+}
+
+article{
+    width: 800px;
+    height: 185px;
+    background-color: chocolate;
+}
+
+aside{
+    width: 800px;
+    height: 185px;
+    background-color: chartreuse;
+}
+
+footer{
+    height: 75px;
+    width: 800px;
+    background-color: fuchsia;
+}
+
+.caixa{
+    border: solid 1px orangered;
+    width: 200px;
+    height: 170px;
+    background-color: gold;
+    margin: 15px 15px;
+    padding: 5px 50px;
+
+}

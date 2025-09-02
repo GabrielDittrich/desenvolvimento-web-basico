@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Página Exemplo Acessível</title> 
+  <link rel="stylesheet" href="style2.css"> 
+</head>
+<body>
+  <!-- Link de acessibilidade: permite "pular" direto para o conteúdo principal -->
+  <!-- Esse link só aparece quando recebe foco via teclado (graças ao CSS .skip-link:focus) -->
+  <a href="#conteudo" class="skip-link">Ir para o conteúdo principal</a>
+
+
+  <div id="container">
+
+    
+    <header>
+      <h1>Nome da empresa</h1> 
+      <p>Descrição da empresa</p> 
+
+
+      <!-- O atributo aria-label fornece descrição para leitores de tela -->
+      <nav aria-label="Navegação principal">
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Quem Somos</a></li>
+          <li><a href="#">Downloads</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    
+    <div class="hero" role="img" aria-label="Imagem ilustrativa grande do banner">
+      <img src="images/banner.jpg">
+    </div>
+
+    <!-- Layout principal: divide a página em main (conteúdo) e aside (barra lateral) -->
+    <div class="layout">
+
+      <!-- Conteúdo principal da página -->
+      <!-- ID "conteudo" serve como âncora para o link de pulo de acessibilidade -->
+      <main id="conteudo">
+
+ 
+        <section>
+          <h2>Conteúdo principal da Página</h2> <!-- Título de segundo nível -->
+          <p>
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut nihil consequuntur eveniet. Est consectetur laborum laboriosam, atque in animi, nobis illum provident tempora numquam, temporibus nemo porro. Accusantium, quasi ducimus.
+          </p>
+
+
+          <article>
+            <h3>Conteúdo complementar</h3> 
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nostrum, accusamus molestiae voluptate eum consectetur, atque, dolorem laborum impedit placeat beatae adipisci fugiat maxime. A, nemo dicta. Expedita, sint animi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab accusantium ipsum praesentium tempora! Possimus optio accusamus aspernatur, laudantium cumque enim voluptas, autem iure, consequuntur quasi eveniet molestias quas dolorem amet.</p>
+
+
+   
+            <button>Clique Aqui</button>
+          </article>
+        </section>
+
+
+        <section>
+          <h2>Galeria</h2>
+          <!-- Conjunto de miniaturas organizado com Flexbox -->
+          <div class="thumbs">
+            <div class="thumb"><img src="images/imagem1.jpg"></div>
+            <div class="thumb"><img src="images/imagem2.jpg"></div>
+            <div class="thumb"><img src="images/imagem3.jpg"></div>
+            <div class="thumb"><img src="images/imagem4.jpg"></div>
+            <div class="thumb"><img src="images/imagem1.jpg"></div>
+          </div>
+        </section>
+      </main>
+
+
+      <aside>
+        <div>
+          <h2>Social</h2>
+          <p>Vídeo / Links</p>
+        </div>
+
+        <!-- Navegação secundária/lateral -->
+        <!-- aria-label diferencia semanticamente essa navegação da principal -->
+        <nav aria-label="Navegação lateral">
+          <h2>Navigate</h2>
+          <ol>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+            <li><a href="#">Item Name</a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+
+
+    <footer>
+      <p>Rodapé do website</p> 
+    </footer>
+  </div>
+</body>
+</html>
