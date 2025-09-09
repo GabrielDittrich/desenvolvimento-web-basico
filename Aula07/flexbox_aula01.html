@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 de Flexbox - 09/09/2025</title>
+    <style>
+        body{
+            background-color: rgb(214, 214, 214);
+            font-family: arial, verdana , sans-serif;
+        }
+
+/*
+        ========================
+        Bloco 1 - Space Around 
+        =========================
+*/
+        .flexbox{
+            height: 250px;
+            border: solid  red;
+            display: flex;
+            justify-content: space-around; /*redistribui elementos filhos com metade da distância nas margens do elemento pai em relação ao dostanciamento entre os próprios elementos filhos*/
+            align-items: center;
+            flex-wrap: wrap; /*Quebra a fila em duas caso a tela seja menor*/
+            /*flex-wrap: nowrap; não quebra a fila */
+        }
+        /* As divs dentro de alguma class atribuida com flexbox vai atribuir o codigo abaixo */
+        .flexbox div{
+            border: solid 2px red;
+            width: 150px;
+            margin: 10px;
+        }
+
+/*      ===========================
+         Bloco 2 - Space Between 
+        ============================
+*/
+        .flexbox2{
+            height: 250px;
+            border: solid orange;
+            display: flex;
+            justify-content: space-between;/*redistribui elementos filhos posicionando um a direita, outro a esquerda e o restante 'por igual'*/
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .flexbox2 div{
+            border: solid 2px orange;
+            width: 150px;
+            margin: 10px;
+        }
+
+/*      =======================
+        Bloco 3 - Space Evelyn
+        =======================    
+*/
+        .flexbox3{
+            height: 250px;
+            border: solid green;
+            display:flex;
+            margin-bottom: 16px;
+            justify-content: space-evenly; /*redistribui elementos filhos posicionando todos 'por igual'*/
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .flexbox3 div{
+            border: solid green;
+            width: 150px;
+            margin: 10px;
+        }
+
+/*      ================
+        Bloco 4 - Start
+        ================
+*/
+    .flexbox4{
+        height: 250px;
+        border: solid palevioletred;
+        display: flex;
+        margin-bottom: 16px;
+        justify-content:start;/*redistribui elementos filhos posicionando todos a partir do início*/
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .flexbox4 div{
+        border: solid palevioletred;
+        width: 150px;
+        margin: 10px;
+    }
+
+/*      ==============
+        Bloco 5 - End
+        ==============
+*/
+
+    .flexbox5{
+        height: 250px;
+        border: solid #f5f2f1;
+        display: flex;
+        margin-bottom: 16px;
+        justify-content:end; /*redistribui elementos filhos posicionando todos a partir do final*/
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .flexbox5 div{
+        border: solid #f5f2f1;
+        width: 150px;
+        margin: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Aula 01 de Flexbox - 09/09/2025</h1>
+    
+    <!-- Bloco 1 - Space Around -->
+    <h2>Bloco 1 - Space Around</h2>
+    <div class="flexbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <!-- Bloco 2 - Space Between -->
+    <h2>Bloco 2 - Space Between</h2>
+    <div class="flexbox2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <!-- Bloco 3 - Space Evelyn -->
+    <h2>Bloco 3 - Space Evenly</h2>
+    <div class="flexbox3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <!-- Bloco 4 -  Start -->
+    <h2>Bloco 4 - Start</h2>
+    <div class="flexbox4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <!-- Bloco 2 - Space Between -->
+    <h2>Bloco 5 - End</h2>
+    <div class="flexbox5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

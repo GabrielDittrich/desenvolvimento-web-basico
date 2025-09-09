@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercício — Estruturas Semânticas</title>
+  <link rel="stylesheet" href="css_exercicio.css">
+
+  <!-- CSS INTERNO -->
+  <style>
+
+     /* Imagens */
+    img { max-width: 100%; height: auto;}
+
+    /* Tabela semântica */
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #444; padding: 6px; text-align: left; }
+    thead th { background: #eee; }
+    tfoot td { background: #737272; color: #fff; font-weight: bold; }
+
+    /* Rodapé */
+    footer { text-align: center; }
+
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <header aria-label="Cabeçalho do site">
+      <h1>Projeto: Exercício de Fixação</h1>
+      <p>Exercício prático de HTML5 + CSS (externo, interno e inline).</p>
+      <div class="banner"></div>
+    </header>
+
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#theme">Tema</a></li>
+        <li><a href="#sec-intro">Introdução</a></li>
+        <li><a href="#artigo">Artigo</a></li>
+        <li><a href="#tabela">Tabela</a></li>
+      </ul>
+    </nav>
+
+    <main id="theme" aria-label="Conteúdo principal">
+      <h2 id="sec-intro">Introdução</h2>
+      <p>Este layout demonstra uso de <strong>tags semânticas</strong>, listas, ARIA, tabela semântica,
+         flexbox, imagens e três formas de CSS (externo, interno e inline).</p>
+         <p>
+            Lorem ipsum dolor sit amet <em>consectetur adipisicing elit.</em> Officiis illo qui natus obcaecati, commodi amet accusamus provident est tempora pariatur cupiditate delectus earum sit in optio quod at. Voluptatum, voluptate!
+         </p>
+      <!-- FLEXBOX: dois blocos lado a lado (quebram em telas menores) -->
+      <section class="flex" aria-label="Seção em colunas (flex)">
+        <article id="artigo" class="caixa" aria-label="titulo-artigo">
+          <h2 id="titulo-artigo">Article: Conteúdo independente</h2>
+          <p>Um <em>article</em> pode conter conteúdo que “se sustenta sozinho”. mas deve manter a coerência com o todo do conteúdo.</p>
+
+          <!-- Imagem com ALT descritivo -->
+          <img src="HTML-e-CSS-Guia-basico.png" alt="Imagem ilustrativa de HTML e CSS">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum enim, vero laudantium amet cumque neque quos eum recusandae animi dolore at. Mollitia perferendis dicta totam obcaecati illum quas necessitatibus ducimus.
+          </p>
+        </article>
+
+        <aside class="caixa" aria-label="Conteúdo complementar">
+          <h2>Lista de Estudo</h2>
+          <p>Lista ordenada (ex.: passos de estudo):</p>
+          <ol>
+            <li>Ler a estrutura.</li>
+            <li>Identificar as tags.</li>
+            <li>Modificar estilos.</li>
+            <li>Validar acessibilidade.</li>
+          </ol>
+
+          <!-- Exemplo de CSS INLINE -->
+          <p style="border:2px dotted #c90; padding:6px;">
+            Exemplo de <strong>CSS inline</strong>: esta caixa usa uma borda pontilhada e padding definidos diretamente no elemento.
+          </p>
+        <img src="HTML-e-CSS-Guia-basico.png" alt="Imagem ilustrativa de HTML e CSS">
+        </aside>
+      </section>
+
+      <!-- TABELA SEMÂNTICA -->
+      <section id="tabela" aria-label="Seção da tabela semântica">
+        <h2>Tabela semântica</h2>
+        <table>
+          <caption>Relatório de Itens por Categoria</caption>
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Item</th>
+              <th>Quantidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hardware</td>
+              <td>Tablets</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Software</td>
+              <td>Licenças</td>
+              <td>30</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total</td>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- Exemplo de CSS INLINE -->
+        <p style="border:2px solid #c90; padding:6px;">
+            Exemplo de <strong>CSS inline</strong>: esta caixa usa uma borda sólida e padding definidos diretamente no elemento.
+        </p>
+      </section>
+        <div class="flex">
+            <div class="galeria"><img src="HTML-e-CSS-Guia-basico.png" alt="Imagem ilustrativa de HTML e CSS em um layout com bordas de wireframe"></div>
+            <div class="galeria"><img src="HTML-e-CSS-Guia-basico.png" alt="Imagem ilustrativa de HTML e CSS em um layout com bordas de wireframe"></div>
+            <div class="galeria"><img src="HTML-e-CSS-Guia-basico.png" alt="Imagem ilustrativa de HTML e CSS em um layout com bordas de wireframe"></div>
+            <div class="galeria"><img src="HTML-e-CSS-Guia-basico.png" alt="Imagem ilustrativa de HTML e CSS em um layout com bordas de wireframe"></div>
+        </div>
+    </main>
+
+    <footer aria-label="Rodapé">
+      <p>Rodapé do site — Exercício de HTML5 + CSS</p>
+    </footer>
+  </div>
+
+</body>
+</html>
