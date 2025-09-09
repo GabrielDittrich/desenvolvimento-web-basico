@@ -1,109 +1,210 @@
-
-/* BASE TIPOGRÁFICA E FUNDO */
-body {
-    font-family: Arial, sans-serif, verdana; 
-    margin: 0; /*  Remove a margem padrão do body, cada navegador tem um padrão*/
-    padding: 0; /* Remove o padding padrão do body */
-    background-color: #bab2b2; /* Cor de fundo clara*/
-}
-
-/* CONTAINER CENTRALIZADO */
-
-#container {
-    max-width: 1000px;  /* Limita a lartura máxima do container */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 10px;  /* Espaço interno para "respira"*/
-    background-color: #fff; /* Fundo branco para destacar */
-    
-}
-
-/* BLOCOS SEMÂNTICOS: VIZUALIZAÇÃO E ESPAÇAMENTO UNIFORMES */
-
-header,nav,main,aside,section,article,footer {
-    border: 1px solid #3f2e2e;   /* Borda sutil para vizualização */
-    padding: 10px; /* Espaço interno para o conteúdo */
-    margin: 5px 0; /* Espaço vertical entre os blocos */
-}
-
-/* Tons de fundo diferenciados em header/footer e nav:
-ajudam os alunos a ver claramente a hierarquia das regiões */
-header,footer { background-color: #f5f5f5;} /* Tons ligeramente mais claros */
-nav {background-color: #e9e9e9;} /* Tons ligeramente mais escuros */
-
-/* LINK DE PULO (SKIP LINK) - ACESSIBILIDADE */
-
-/* No HTML, note:
-    <a href="#conteudo" class="skip-link> Ir para o conteúdo principal</a>
- Ele aponta para <main id=conteudo> */
- 
-.skip-link {
-    position: absolute;
-    left: -9999px;
-    background-color: gray;
-    padding: 0 ;
-}
-
-.skip-link:focus {
-    left: 10px;
-    top: 10px;
-}
-
-nav ul {
-    list-style: none; 
-    margin: 0; 
-    padding: 0;
-
-    display: flex;
-    gap: 15px;
+/* =========================
+   BASE TIPOGRÁFICA E FUNDO
+   ========================= */
+   body {
+    font-family: Arial, sans-serif, verdana;  /* Define a família tipográfica padrão da página (herdável por todos os elementos). */
+    margin: 0;                       /* Remove a margem padrão do body para permitir layout de largura total. */
+    padding: 0;                      /* Remove o padding padrão do body. */
+    background-color: #bab2b2;             /* Cor de fundo clara para dar contraste com o container branco (#fff). */
+  }
+  
+  /* =========================
+     CONTAINER CENTRALIZADO
+     ========================= */
+  #container {
+    max-width: 1000px;               /* Limita a largura máxima do conteúdo para melhor legibilidade em telas grandes. */
+    margin: 0 auto;                  /* Centraliza horizontalmente o container (auto nas laterais). */
+    padding: 10px;                   /* Espaço interno para “respirar” o conteúdo longe das bordas. */
+    background: #ffffff;                /* Fundo branco para destacar o conteúdo sobre o body #fafafa. */
+  }
+  
+  /* ==========================================================
+     BLOCOS SEMÂNTICOS: VISUALIZAÇÃO E ESPAÇAMENTO UNIFORMES
+     ========================================================== */
+  header, nav, main, aside, section, article, footer {
+    border: 1px solid #3f2e2e;          /* Borda sutil para visualizar a divisão dos blocos semânticos (útil didaticamente). */
+    padding: 10px;                   /* Espaço interno para o conteúdo não “colar” nas bordas. */
+    margin: 5px 0;                   /* Espaço vertical entre os blocos para leitura visual do layout. */
+  }
+  /* Tons de fundo diferenciados em header/footer e nav:
+     ajudam os alunos a ver claramente a hierarquia das regiões. */
+  header, footer { background: #f5f5f5; }  /* Tom ligeiramente mais escuro para topo e rodapé. */
+  nav { background: #e9e9e9; }             /* Tom ainda mais escuro para a(s) barra(s) de navegação. */
+  
+  /* ==========================================
+     LINK DE PULO (SKIP LINK) — ACESSIBILIDADE
+     ========================================== */
+  /* No HTML, note:
+     <a href="#conteudo" class="skip-link">Ir para o conteúdo principal</a>
+     Ele aponta para <main id="conteudo">, permitindo que usuários de teclado/leitores de tela saltem
+     diretamente para o conteúdo principal. */
+  .skip-link {
+    position: absolute;              /* Permite reposicionar o link fora da tela sem retirá-lo do fluxo semântico. */
+    left: -9999px;                   /* Move o link para fora da viewport (não visível, mas presente). */
+    background: #eee;                /* Cor de fundo visível quando em foco (ver regra abaixo). */
+    padding: 5px;                    /* Área clicável adequada quando o link fica visível. */
+  }
+  .skip-link:focus {
+    left: 10px;                      /* Traz o link de volta para dentro da tela quando recebe foco via teclado (Tab). */
+    top: 10px;                       /* Define uma posição visível consistente. */
+  }
+  
+  /* ============================================
+     NAVEGAÇÃO PRINCIPAL — LISTA EM LINHA (FLEX)
+     ============================================ */
+  /* Relaciona-se ao HTML:
+     <nav aria-label="Navegação principal">
+       <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="#">Products</a></li>
+         <li><a href="#">Download</a></li>
+       </ul>
+     </nav>
+     Usamos flex no UL para alinhar os LIs em linha e controlar espaçamento responsivo. */
+  nav ul {
+    list-style: none;                /* Remove marcadores (bolinhas) da lista de navegação. */
+    margin: 0;                       /* Zera margem padrão do UL para alinhamento limpo no nav. */
+    padding: 0;                      /* Zera padding padrão do UL. */
+  
+    display: flex;                   /* Coloca os <li> lado a lado (em linha). */
+    gap: 15px;                       /* Espaçamento horizontal (e vertical quando quebrar linha) entre os itens do menu. */
+    align-items: center;             /* Alinha verticalmente o conteúdo dos itens (útil se links tiverem alturas diferentes). */
+    flex-wrap: wrap;                 /* Permite que os itens quebrem linha em telas estreitas, evitando overflow. */
+  }
+  
+  nav ol {
+    list-style: none;                /* Remove marcadores (bolinhas) da lista de navegação. */
+    margin: 0;                       /* Zera margem padrão do UL para alinhamento limpo no nav. */
+    padding: 0;                      /* Zera padding padrão do UL. */
+  }
+  nav li {
+    margin: 0;                       /* Garante que não haja margens inesperadas nos itens. */
+    padding: 0;                      /* Mantém coesão de altura; padding nos LIs é opcional para ampliar alvo clicável. */
+  }
+  
+  /* ============================
+     LINKS DO MENU — ESTADOS UX
+     ============================ */
+  nav a {
+    text-decoration: none;           /* Remove sublinhado padrão (vamos usar sublinhado somente no hover). */
+    color: #333;                     /* Cor base do link; contrasta bem com nav #e9e9e9. */
+    font-weight: bold;               /* Realça links de navegação, melhorando escaneabilidade. */
+  
+    /* Abaixo, configuramos o sublinhado “controlado” para evitar salto de layout no :hover: */
+    text-underline-offset: 3px;      /* Distância do sublinhado em relação ao texto (melhora legibilidade). */
+    text-decoration-thickness: 2px;  /* Espessura do sublinhado quando aplicarmos underline. */
+  
+    transition: color .2s ease,      /* Transições suaves melhoram a percepção de qualidade sem distrair. */
+                text-decoration-color .2s ease;
+  }
+  
+  /* Estado :visited — importante para feedback ao usuário
+     sobre o que já foi navegado. */
+  nav a:visited {
+    color: #666;                     /* Tom mais apagado para links visitados. */
+  }
+  
+  /* Hover/foco: feedback visual e acessibilidade de teclado. */
+  nav a:hover {
+    color: #0077cc;                  /* Realce da cor no hover. */
+    text-decoration: underline;      /* Ativa sublinhado no hover sem mexer em altura (evita “pulo”). */
+    text-decoration-color: #0077cc;  /* Sublinhado com a mesma cor do texto no hover. */
+  }
+  nav a:focus-visible {
+    outline: 2px solid #005a99;      /* Anel de foco acessível (aparece ao navegar por teclado). */
+    outline-offset: 2px;             /* Afasta o contorno do elemento para não colar no texto. */
+  }
+  
+  /* Estado “página atual” usando ARIA:
+     No HTML, aplique em um link real da página ativa:
+     <a href="/home" aria-current="page">Home</a>
+     Isso melhora acessibilidade e permite destaque visual consistente. */
+  nav a[aria-current="page"] {
+    color: #005a99;                  /* Cor diferenciada para a página ativa. */
+    text-decoration: underline;      /* Sublinhado fixo no link ativo. */
+    text-decoration-color: #005a99;  /* Mantém a paleta coerente. */
+  }
+  
+  /* ==================================
+     LAYOUT PRINCIPAL: MAIN + ASIDE (FLEX)
+     ================================== */
+  /* Relaciona-se ao HTML:
+     <div class="layout">
+       <main id="conteudo">…</main>
+       <aside>…</aside>
+     </div>
+     A classe .layout cria um flex container para organizar main (conteúdo) e aside (barra lateral). */
+  .layout {
+    display: flex;                   /* Ativa o layout flex para posicionar main e aside lado a lado. */
+    flex-wrap: wrap;                 /* Permite que o aside quebre para baixo em telas menores (responsividade). */
+    gap: 10px;                       /* Espaçamento entre as colunas (main/aside). */
+  }
+  /* Proporções de largura dentro do flex.
+     O “peso” do main é 3 e do aside é 1; ou seja, main ocupa ~75%,
+     aside ~25% dentro da linha disponível. */
+  main { flex: 3; }
+  aside { flex: 1; }
+  
+  /* =======================
+     HERO (BANNER DECORATIVO)
+     ======================= */
+  /* No HTML, você usou:
+     <div class="hero" role="img" aria-label="Imagem ilustrativa grande do banner">Banner</div>
+     A classe .hero cria uma faixa visual de destaque. */
+  .hero {
+    position: relative;           /* permite posicionar a imagem como 'fundo' */
+    height: 200px;                /* altura desejada do banner */
+    background: #ddd;             /* cor de fallback enquanto a imagem carrega */
+    display: flex;                /* centraliza o conteúdo textual */
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-nav ol {
-    list-style: none; /* Remove os marcadores (bolinhas) */
-    margin: 0; /* Zera a margem padrão do UL */  
-    padding: 0; /* Zera o padding padrão do UL */
-}
-
-nav li {
-    margin: 0; /* Garante que não haja margens */
-    padding: 0; /* Mantém coesão de altura */
-}
-
-nav a {
-    text-decoration: none;  /* Remove sublinhado padrão */
-    color: #333; /* Cor base do link */
-    font-weight: bold; /* Realça links de navegação */
-
-    /* Abaixo, configuramos o sublinhado "controlador" */
-    text-underline-offset: 3px;  /* Distância do sublinhado */
-    text-decoration-thickness: 2px; /* Espessura do sublinhado */
-
-    transition: color .2s ease,
-        text-decoration-color .2s ease;
-}
-
-/* Estado Quando o link foi visitado  - */
-nav a:visited{
-    color: #666; 
-}
-
-nav a:hover{
-    color: #0077cc;
-    text-decoration: underline;
-    text-decoration-color: #0077cc;
-}
-
-nav a:focus-visible{
-    outline: 2px solid #005a99; /* Anel de foco acessivel */ 
-    outline-offset: 2px ; /* Afasta  o contorno do elemneto */
-}
-
-.layout{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-main {flex: 3;}
-aside{flex: 1;}
+    overflow: hidden;             /* corta sobras da imagem ao usar cover */
+  }
+  
+  /* A imagem vira 'fundo' ocupando toda a área do hero */
+  .hero img {
+    position: absolute;           /* tira do fluxo e coloca atrás do conteúdo */
+    inset: 0;                     /* top/right/bottom/left = 0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            /* preenche sem distorcer; pode cortar bordas */
+    object-position: center;      /* centraliza o enquadramento */
+    display: block;               /* remove gaps de imagens inline */
+  }
+  
+  /* Qualquer conteúdo dentro do hero fica acima da imagem */
+  .hero > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* =======================
+     MINIATURES (THUMBNAILS)
+     ======================= */
+  /* No HTML:
+     <div class="thumbs">
+       <div class="thumb">Img 1</div> …
+     </div>
+     A “grade” de thumbs é um flex row com espaçamento curto. */
+  .thumbs { 
+    display: flex;                   /* Coloca as miniaturas lado a lado. */
+    gap: 5px;                        /* Espaçamento entre cada miniatura. */
+  }
+  .thumb img {
+    flex: 1;                         /* Faz cada miniatura dividir igualmente o espaço disponível. */
+    height: 80px;                    /* Altura padrão para uniformizar a área visual. */
+    background: #eee;                /* Fundo cinza claro para simular um placeholder de imagem. */
+    display: flex;                   /* Centralização do rótulo interno “Img X”. */
+    justify-content: center;         /* Centro horizontal. */
+    align-items: center;             /* Centro vertical. */
+  }
+  
+  /* ====================================================
+     PREFERÊNCIA DO USUÁRIO: REDUÇÃO DE MOVIMENTO (A11y)
+     ==================================================== */
+  /* Respeita a configuração do sistema operacional:
+     se o usuário preferir animações reduzidas, removemos transições. */
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }  /* Zera todas as transições para evitar desconforto. */
+  }
+  
