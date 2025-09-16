@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #000000;
+  background: #f7f7f7;
+}
+
+#wrap {
+  width: 1000px;
+  border: 3px solid #000000;
+  margin: 0 auto;
+  background: #d0e0e9;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer,
+main {
+  border: solid 2px #000000;
+  margin: 10px;
+  border-radius: 5px;
+  background: #93b8d0;
+}
+header h1 {
+  margin: 10px;
+}
+
+p {
+  margin: 10px;
+}
+nav {
+  padding: 10px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #a60505;
+  font-weight: bold;
+}
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.banner img {
+  width: 98%;
+}
+.tema {
+  display: flex;
+  justify-content: space-between;
+}
+/* dois quadros lado a lado */
+.box {
+  background: #b1d3ea;
+  padding: 20px;
+  width: 100%;
+}
+.box h2 {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+}
+.box p {
+  margin: 8px;
+  text-align: justify;
+}
+.box img {
+  width: 100%;
+}
+
+/* tabela 3x5 */
+
+table {
+  width: 100%;
+  text-align: center;
+  border: solid 1px #000;
+}
+caption {
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* galeria */
+.galeria {
+  padding: 5px;
+}
+.galeria h2 {
+  margin: 12px;
+  font-size: 22px;
+}
+.flex-galeria {
+  display: flex;
+  justify-content: space-between;
+  height: 95px;
+  margin-bottom: 10px;
+}
+.flex-galeria img {
+  height: 100%;
+  gap: 20px;
+}
+.tabela {
+  padding: 10px;
+}
