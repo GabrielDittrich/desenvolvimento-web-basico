@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação 30/09 - Web básico</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table {
+            width: 20vw;
+        }
+
+        table,
+        th,
+        td {
+            border: solid 1px black;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header aria-label="Cabeçalho da Página">
+            <h1>TITULO PRINCIPAL</h1>
+            <p>Parágrafo simples</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+
+        <main aria-label="Conteúdo Principal">
+            <div id="banner">
+                <img src="img/banner.jpg" alt="Banner com imagem" style="width: 100%;">
+            </div>
+
+            <div class="flex">
+
+                <article>
+                    <h2>Titulo secundário</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloremque dolor eius fugiat
+                        illo,
+                        eligendi maxime eos autem quisquam quis? Porro voluptate mollitia voluptates recusandae
+                        accusamus ad
+                        quaerat temporibus qui.</p>
+                </article>
+
+                <section>
+                    <table>
+                        <caption>Tabela 5x3</caption>
+                        <thead>
+                            <th>Coluna 1</th>
+                            <th>Coluna 2</th>
+                            <th>Coluna 3</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Item 1</td>
+                                <td>item 2</td>
+                                <td>Item 3</td>
+                            </tr>
+                            <tr>
+                                <td>Item 4</td>
+                                <td>Item 5</td>
+                                <td>Item 6</td>
+                            </tr>
+                            <tr>
+                                <td>Item 7</td>
+                                <td>Item 8</td>
+                                <td>Item 9</td>
+                            </tr>
+                        </tbody>
+                        <tfoot style=" background-color: white;">
+                            <td colspan="3">Total = 9</td>
+                        </tfoot>
+                    </table>
+                </section>
+            </div>
+
+            <aside>
+                <h2>Titulo secundário</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quam nulla officia perferendis
+                    sint ipsam officiis debitis, illum quis animi asperiores labore repellat temporibus impedit
+                    necessitatibus quasi odio deserunt nemo!</p>
+            </aside>
+
+            <section class="flex">
+                <img src="img/section.jpg" alt="Imagem ilustrativa">
+                <img src="img/section.jpg" alt="Imagem ilustrativa">
+                <img src="img/section.jpg" alt="Imagem ilustrativa">
+            </section>
+        </main>
+
+        <footer aria-label="Rodapé da Página">
+            <p>Parágrafo simples</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
