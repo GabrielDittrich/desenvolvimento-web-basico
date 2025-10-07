@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Funções Simples em JavaScript</title>
+</head>
+<body>
+  <h1>Exemplos Simples de Funções</h1>
+
+  <script>
+    // ============================================================
+    // 1) O que é uma função?
+    // ------------------------------------------------------------
+    // Uma função é um "bloco" de código que executa uma tarefa.
+    // Podemos "chamar" a função sempre que quisermos repetir essa tarefa.
+    // ============================================================
+
+    // Exemplo 1: função sem parâmetros e sem retorno
+    function dizerOla() {
+      document.write("<p>Olá, mundo!</p>");
+    }
+
+    // Chamando a função (executa o código dentro dela)
+    dizerOla();
+
+
+    // ============================================================
+    // 2) Função com parâmetro (recebe dados)
+    // ------------------------------------------------------------
+    // Um parâmetro é uma "entrada" para a função, como um valor ou nome.
+    // ============================================================
+
+    function saudarPessoa(nome) {
+
+      document.write(`<p>Olá, ${nome}! Seja bem-vindo(a).</p>`);
+      //document.write("<p>Olá, " + nome + "! Seja bem-vindo(a).</p>");
+
+    }
+
+    // Chamando a função e enviando um valor
+    saudarPessoa("Maria");
+    saudarPessoa("João");
+
+
+    // ============================================================
+    // 3) Função com dois parâmetros
+    // ------------------------------------------------------------
+    // Podemos passar mais de uma informação de uma vez.
+    // ============================================================
+
+    function mostrarIdade(nome, idade) {
+      //document.write("<p>Olá, " + nome + ", você tem " + idade + "! Seja bem-vindo(a).</p>");
+      document.write(`<p>${nome} tem ${idade} anos.</p>`);
+    }
+
+    mostrarIdade("Ana", 22);
+    mostrarIdade("Pedro", 30);
+
+
+    // ============================================================
+    // 4) Função que retorna um valor
+    // ------------------------------------------------------------
+    // "return" envia o resultado de volta para quem chamou a função.
+    // ============================================================
+
+    function somar(a, b) {
+      return a + b;
+    }
+
+    // Podemos guardar o resultado em uma variável
+    let resultado = somar(5, 7);
+
+    // E depois exibir
+    document.write(`<p>O resultado da soma é: ${resultado}</p>`);
+
+
+    // ============================================================
+    // 5) Função que calcula e mostra direto
+    // ------------------------------------------------------------
+    // Também podemos fazer uma função que já escreve o resultado.
+    // ============================================================
+
+    function multiplicar(x, y) {
+      let produto = x * y;
+      document.write(`<p>${x} × ${y} = ${produto}</p>`);
+    }
+
+    multiplicar(2, 3);
+    multiplicar(5, 4);
+
+    // ------------------------------------------------------------
+    // Fim do exemplo. Nenhum loop ou condicional foi usado.
+    // Objetivo: mostrar a estrutura e o uso básico de funções.
+    // ------------------------------------------------------------
+  </script>
+
+</body>
+</html>
