@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Semântico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Cadastro de Usuário</h1>
+    <form id="userForm" action="submit.php" method="POST">
+      
+  <fieldset>
+    <legend>Informações Pessoais</legend>
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" autocomplete="name" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" autocomplete="email" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" minlength="6" autocomplete="new-password" required>
+
+    <label for="confirmar_senha">Confirmar Senha:</label>
+    <input type="password" id="confirmar_senha" name="confirmar_senha" required minlength="6" autocomplete="new-password">
+  </fieldset>
+
+  <fieldset>
+    <legend>Deseja receber nossa newsletter?</legend>
+
+    <label for="news_sim">
+      <input type="radio" id="news_sim" name="newsletter" value="sim" required> Sim
+    </label>
+
+    <label for="news_nao">
+      <input type="radio" id="news_nao" name="newsletter" value="nao"> Não
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Área de Interesse</legend>
+
+    <label for="interesses">Selecione sua área:</label>
+    <select id="interesses" name="interesses" required>
+      <option value="">Selecione...</option>
+      <option value="tecnologia">Tecnologia</option>
+      <option value="design">Design</option>
+      <option value="marketing">Marketing</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Habilidades</legend>
+
+    <label>
+      <input type="checkbox" name="habilidades[]" value="html"> HTML
+    </label>
+    <label>
+      <input type="checkbox" name="habilidades[]" value="css"> CSS
+    </label>
+    <label>
+      <input type="checkbox" name="habilidades[]" value="javascript"> JavaScript
+    </label>
+    <label>
+      <input type="checkbox" name="habilidades[]" value="python"> Python
+    </label>
+  </fieldset>
+
+  <button type="submit">Enviar</button>
+</form>
+    </main>
+
+</body>
+</html>
