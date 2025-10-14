@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Componentes JS para Iniciantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Carregar o JS depois do parse do HTML -->
+  <script src="app.js" defer></script>
+
+  <!-- CSS mínimo só para visual (opcional) -->
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    h1 { margin-top: 0; }
+    section { border: 1px solid #ddd; padding: 16px; border-radius: 8px; margin-bottom: 16px; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    button { cursor: pointer; }
+    /* Modal simples */
+    #modal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: grid; place-items: center; }
+    .modal-box { background: #fff; padding: 20px; border-radius: 8px; min-width: 260px; }
+    /* Tabs simples */
+    .tab { padding: 8px; border: 1px solid #eee; border-radius: 6px; margin-top: 8px; }
+  </style>
+    <script src="maisexemplos.js" defer></script>
+</head>
+<body>
+  <h1>Componentes JS (Funções + DOM)</h1>
+
+  <!-- 1) Menu hambúrguer -->
+  <section>
+    <h2>1) Menu Hambúrguer</h2>
+    <div class="row">
+      <button id="menuToggle">☰ Menu</button>
+      <nav id="menu" hidden>
+        <a href="#accordion">Accordion</a> |
+        <a href="#tabs">Tabs</a> |
+        <a href="#modal">Modal</a> |
+        <a href="#carousel">Carrossel</a> |
+        <a href="#senha">Senha</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 2) Accordion -->
+  <section id="accordion">
+    <h2>2) Accordion</h2>
+    <h3 class="acc-titulo">Pergunta 1</h3>
+    <div class="acc-conteudo" hidden>Resposta da pergunta 1.</div>
+
+    <h3 class="acc-titulo">Pergunta 2</h3>
+    <div class="acc-conteudo" hidden>Resposta da pergunta 2.</div>
+  </section>
+
+  <!-- 3) Tabs -->
+  <section id="tabs">
+    <h2>3) Tabs (Abas)</h2>
+    <div class="row">
+      <button class="tab-btn" data-alvo="#tab1">Aba 1</button>
+      <button class="tab-btn" data-alvo="#tab2">Aba 2</button>
+      <button class="tab-btn" data-alvo="#tab3">Aba 3</button>
+    </div>
+    <div id="tab1" class="tab">Conteúdo da aba 1</div>
+    <div id="tab2" class="tab" hidden>Conteúdo da aba 2</div>
+    <div id="tab3" class="tab" hidden>Conteúdo da aba 3</div>
+  </section>
+
+  <!-- 5) Carrossel -->
+  <section id="carousel">
+    <h2>5) Carrossel de imagens</h2>
+    <img id="slide" src="https://via.placeholder.com/320x180?text=IMG+1" alt="Imagem do carrossel" width="320" />
+    <div class="row" style="margin-top:8px;">
+      <button id="prev">Anterior</button>
+      <button id="next">Próximo</button>
+    </div>
+  </section>
+
+  <!-- 6) Mostrar/Ocultar Senha -->
+  <section id="senha">
+    <h2>6) Mostrar / Ocultar Senha</h2>
+    <div class="row">
+      <input type="password" id="campoSenha" placeholder="Senha" />
+      <button id="toggleSenha">Mostrar</button>
+    </div>
+  </section>
+</body>
+</html>

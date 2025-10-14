@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função externa que calcula a soma de dois números
+    function calcularSoma(a, b) {
+    
+        // Calcula a soma de 'a' e 'b'
+        const soma = a + b;
+
+            // Função interna (nested function) que calcula o dobro da soma
+            function calcularDobro(soma) {
+            return soma * 2; // Retorna o dobro da soma
+            }
+    
+  
+    
+        // Chama a função interna para calcular o dobro da soma
+        return calcularDobro(soma); // Retorna o resultado da função interna
+    }
+
+// Testando a função
+    console.log(calcularSoma(3, 4));  // Saída: 14 (soma 3 + 4 = 7, dobro de 7 é 14)
+    console.log(calcularSoma(5, 10)); // Saída: 30 (soma 5 + 10 = 15, dobro de 15 é 30)
+
+    </script>
+
+
+</body>
+</html>

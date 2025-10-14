@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+Uma arrow function é uma forma mais curta e moderna de declarar funções em JavaScript.
+Ela é útil principalmente quando queremos definir funções simples e de forma mais direta, evitando o uso da palavra-chave function.
+Além da sintaxe mais curta, as arrow functions também têm algumas características específicas (como o comportamento do this), mas para o exemplo básico, estamos focando na simplificação de código.
+-->
+    <script>
+      const somar = (a, b) => {
+    return a + b;
+    };
+
+    console.log(somar(5, 3)); // Saída: 8
+    console.log(somar(10, 7)); // Saída: 17
+    /*Para chamar a função, usamos somar(5, 3). Isso faz com que a função receba os números 5 e 3 como os valores de a e b, respectivamente.
+    A função então soma esses dois valores e retorna o resultado.
+    console.log() é usado para exibir o valor retornado no console. No exemplo, a função somar(5, 3) retorna 8, então o console exibirá 8.*/
+
+
+    //No caso de funções muito simples como essa, você pode ainda simplificar mais a sintaxe da arrow function, removendo as chaves {} e o return:
+    
+    const somar2 = (a, b) => a + b;
+    console.log(somar2(5, 3)); // Saída: 8
+    //console.log(somar(10, 7)); // Saída: 17
+
+    /*Quando o corpo da função tem apenas uma linha e a única coisa que ela faz é retornar um valor, podemos omitir as chaves {} e a palavra-chave return. A seta => assume que a única expressão que vem logo depois será o valor retornado.*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function - Soma de Dois Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Soma de Dois Números com Arrow Function</h1>
+
+    <!-- Formulário para entrada dos números -->
+    <input type="number" id="numero1" placeholder="Digite o primeiro número">
+    <input type="number" id="numero2" placeholder="Digite o segundo número">
+    <button onclick="somarNumeros()">Somar</button>
+
+    <!-- Div para exibir o resultado -->
+    <div id="resultado"></div>
+
+    <!--
+    const somar = (a, b) => a + b;
+    console.log(somar(5, 3)); // Saída: 8
+    console.log(somar(10, 7)); // Saída: 17
+
+    -->
+
+    <script>
+      // Função arrow para somar dois números
+const somarNumeros = () => {
+    // Captura os valores dos inputs e converte para números
+    // document.getElementById('numero1').value obtém o valor inserido no campo com id 'numero1'
+    // parseFloat é usado para converter o valor (que é uma string) em um número decimal
+    const num1 = parseFloat(document.getElementById('numero1').value);
+    const num2 = parseFloat(document.getElementById('numero2').value);
+
+    // Calcula a soma dos dois números capturados
+    const soma = num1 + num2;
+
+    // Exibe o resultado da soma na div com id 'resultado'
+    // document.getElementById('resultado').textContent altera o conteúdo de texto da div para exibir o resultado
+    document.getElementById('resultado').textContent = "A soma é: " + soma;
+};
+
+    </script>
+
+</body>
+</html>

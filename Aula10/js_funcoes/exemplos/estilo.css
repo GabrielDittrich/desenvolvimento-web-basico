@@ -1,0 +1,5 @@
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .exemplo { border: 2px solid #ddd; padding: 15px; margin: 20px 0; border-radius: 8px; }
+        button { padding: 8px 15px; margin: 5px; cursor: pointer; }
+        input { padding: 8px; margin: 5px; width: 150px; }
+        .resultado { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 4px; }

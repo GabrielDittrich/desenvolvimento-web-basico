@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    /*
+    Um pedaço, um trecho de código qu é executado quando convocado
+
+    Função VOID (vazia)
+    Funcão com Parâmetro
+    Função Return
+    Função Arrow
+    Recomendação: usar pequenas funções para tarefas distintas
+    */
+
+    // Funcão com Return
+    function calcularAreaRetangulo(largura, altura) {
+    const area = largura * altura;  // Multiplica a largura pela altura para obter a área
+    return area;  // Retorna o valor da área calculada
+    }
+
+    // Chamando a função calcularAreaRetangulo e armazenando o resultado
+    const areaRetangulo = calcularAreaRetangulo(5, 10);
+
+    // Exibindo o resultado no console
+    console.log("A área do retângulo é: " + areaRetangulo);
+
+    // Chamando a função diretamente no console para outra operação
+    console.log("A área de outro retângulo é: " + calcularAreaRetangulo(7, 3));  // Isso vai exibir 21
+
+
+    </script>
+
+
+</body>
+</html>

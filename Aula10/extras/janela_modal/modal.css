@@ -1,0 +1,52 @@
+/* Botão para abrir o modal */
+#btnAbrirModal {
+    padding: 10px 20px; /* Define o tamanho do botão */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Efeito hover para o botão (quando o mouse está sobre ele) */
+#btnAbrirModal:hover {
+    background-color: #0056b3; /* Muda a cor quando o mouse passa por cima */
+}
+
+/* Estilos para o modal */
+#modal {
+    display: none; /* O modal está escondido inicialmente */
+    position: fixed; /* O modal fica fixo na tela, sempre visível quando ativado */
+    top: 0; /* Começa no topo da página */
+    left: 0; /* Começa à esquerda da página */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    height: 100%; /* Ocupa 100% da altura da tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
+    justify-content: center; /* Alinha o conteúdo do modal ao centro na horizontal */
+    align-items: center; /* Alinha o conteúdo do modal ao centro na vertical */
+}
+
+/* Estilos para o conteúdo do modal (caixa branca) */
+#conteudoModal {
+    background-color: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno (padding) */
+    border-radius: 5px; /* Canto arredondado */
+    text-align: center; /* Centraliza o texto dentro do modal */
+    width: 300px; /* Largura fixa do modal */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Sombra para destacar o modal */
+}
+
+/* Estilo para o botão de fechar dentro do modal */
+#btnFecharModal {
+    padding: 10px 20px; /* Tamanho do botão */
+    background-color: red; /* Fundo vermelho */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+/* Efeito hover para o botão de fechar */
+#btnFecharModal:hover {
+    background-color: darkred; /* Cor mais escura ao passar o mouse */
+}

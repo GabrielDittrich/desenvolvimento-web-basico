@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    /*
+    Um pedaço, um trecho de código qu é executado quando convocado
+
+    Função VOID (vazia)
+    Funcão com Parâmetro
+    Função Return
+    Função Arrow
+    Recomendação: usar pequenas funções para tarefas distintas
+    */
+
+    // Funcão com Return
+    function diaDoMes() {
+    
+    return (new Date()).getDate();  // =
+    }
+
+    console.log(diaDoMes());  // 
+
+/*
+function diaDoMes() {
+    const dataAtual = new Date();
+    const dia = dataAtual.getDate();        // Dia do mês (1-31)
+    const mes = dataAtual.getMonth() + 1;   // Mês (0-11, por isso somamos 1)
+    const ano = dataAtual.getFullYear();    // Ano com 4 dígitos
+    
+    return `${dia}/${mes}/${ano}`;// O uso da crase (`) em JavaScript nesse caso é para criar template literals (também conhecidos como template strings). Essas strings permitem a interpolação de variáveis
+}
+
+console.log(diaDoMes());
+*/
+    </script>
+
+
+</body>
+</html>
